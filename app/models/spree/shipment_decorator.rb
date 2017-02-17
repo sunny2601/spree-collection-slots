@@ -8,7 +8,7 @@ Spree::Shipment.class_eval do
   before_save :ensure_valid_collection_slot, if: :collection_slot
 
   def collection_slot
-    Spree::DeliverySlot.unscoped { super }
+    Spree::CollectionSlot.unscoped { super }
   end
 
   def collection_slot_time_frame

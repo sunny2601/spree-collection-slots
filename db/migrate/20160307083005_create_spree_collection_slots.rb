@@ -1,4 +1,4 @@
-class CreateSpreeDeliverySlots < ActiveRecord::Migration
+class CreateSpreeCollectionSlots < ActiveRecord::Migration
   def change
     create_table :spree_collection_slots do |t|
       t.references :shipping_method, index: true

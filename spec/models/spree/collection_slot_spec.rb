@@ -140,11 +140,11 @@ module Spree
             collection_slot.start_time = new_start_time
           end
 
-          subject { Spree::DeliverySlot.last }
+          subject { Spree::CollectionSlot.last }
 
           it 'expects to create new collection slot' do
             expect { collection_slot.save! }
-              .to change { Spree::DeliverySlot.unscoped.count }.by(1)
+              .to change { Spree::CollectionSlot.unscoped.count }.by(1)
           end
 
           it 'expects new object to have changed start_time' do
@@ -175,11 +175,11 @@ module Spree
             collection_slot.end_time = new_end_time
           end
 
-          subject { Spree::DeliverySlot.last }
+          subject { Spree::CollectionSlot.last }
 
           it 'expects to create new collection slot' do
             expect { collection_slot.save! }
-              .to change { Spree::DeliverySlot.unscoped.count }.by(1)
+              .to change { Spree::CollectionSlot.unscoped.count }.by(1)
           end
 
           it 'expects new object to have changed end_time' do
@@ -210,7 +210,7 @@ module Spree
 
           it 'expects to create new collection slot' do
             expect { collection_slot.save! }
-              .to_not change { Spree::DeliverySlot.unscoped.count }
+              .to_not change { Spree::CollectionSlot.unscoped.count }
           end
         end
       end

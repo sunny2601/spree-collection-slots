@@ -61,7 +61,7 @@
           <% if rate = shipment.selected_shipping_rate %>
             <td colspan="4">
               <strong><%= rate.name %></strong><br />
-              <%= "<strong>Delivery Slot : </strong>#{ shipment.collection_slot_time_frame }".html_safe if shipment.shipping_method.is_collection_slots_enabled? %>
+              <%= "<strong>Collection Slot : </strong>#{ shipment.collection_slot_time_frame }".html_safe if shipment.shipping_method.is_collection_slots_enabled? %>
             </td>
             <td class="total text-center">
               <%= shipment.display_cost %>
