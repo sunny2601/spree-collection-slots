@@ -1,4 +1,4 @@
-module SpreeDeliverySlots
+module SpreeCollectionSlots
   module Generators
     class InstallGenerator < Rails::Generators::Base
 
