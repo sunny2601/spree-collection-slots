@@ -27,6 +27,11 @@
           <%= Spree.t('shipment_mailer.shipped_email.collection_slot', time_frame: @shipment.collection_slot_time_frame) %>
         </p>
       <% end %>
+      <% if @shipment.is_delivery_slots_enabled? %>
+        <p>
+          <%= Spree.t('shipment_mailer.shipped_email.delivery_slot', time_frame: @shipment.delivery_slot_time_frame) %>
+        </p>
+      <% end %>
       <% if @shipment.tracking %>
         <p>
           <%= Spree.t('shipment_mailer.shipped_email.track_information', tracking: @shipment.tracking) %>
